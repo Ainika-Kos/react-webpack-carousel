@@ -1,4 +1,6 @@
-export const slides = [
+import { SlideType } from './../types/types';
+
+export const slides: SlideType[] = [
     {
         id: 1,
         title: 'Lorem ultricies habitasse sodales cubilia amet cubilia varius semper nisi',
