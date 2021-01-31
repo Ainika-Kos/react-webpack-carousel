@@ -59,6 +59,4 @@ export const slides = [
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel maximus ligula. Nullam velit mi, fermentum nec rhoncus nec, faucibus sed magna. Aliquam vulputate eu risus sit amet semper. Curabitur volutpat, quam ac rutrum luctus, libero urna vestibulum metus, quis dictum nibh ex tincidunt velit. In lobortis non massa sagittis.',
         author: 'Louisa Shannon'
     },
-    
-
 ]

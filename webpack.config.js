@@ -7,7 +7,7 @@ const htmlPlugin = new HtmlWebpackPlugin({
 })
 
 module.exports = {
-    entry: "./src",
+    entry: "./src/index.ts",
     mode: "production",
     performance: { hints: false },
     output: {
@@ -17,14 +17,14 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)/,
+                test: /\.tsx?$/,
                 exclude: /node_modules/,
-                use: ["babel-loader"],
+                use: 'babel-loader',
             },
         ],
     },
     resolve: {
-        extensions: ["*", ".js", ".jsx"],
+        extensions: [ ".tsx", ".ts", ".js" ],
     },
     plugins: [htmlPlugin],
 };
