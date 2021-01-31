@@ -8,6 +8,7 @@
     padding: 20px;
     background-color: #2D3032;
     transition: all 0.5s;
+    cursor: pointer;
 }
 
 .slide__image-wrapper {

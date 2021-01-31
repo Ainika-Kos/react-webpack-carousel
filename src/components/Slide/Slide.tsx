@@ -10,10 +10,25 @@ type SlideProps = {
     touchStartHandler: (e: React.TouchEvent) => void;
     touchMoveHandler: (e: React.TouchEvent) => void;
     touchEndHandler: () => void;
+    mouseDownHandler: (e: React.MouseEvent) => void;
+    mouseMoveHandler: (e: React.MouseEvent) => void;
+    mouseUpHandler: () => void;
 }
 
 const Slide: FC<SlideProps> =
-    ({ id, title, category, author, translate, touchStartHandler, touchMoveHandler, touchEndHandler }) => {
+    ({
+        id,
+        title,
+        category,
+        author,
+        translate,
+        touchStartHandler,
+        touchMoveHandler,
+        touchEndHandler,
+        mouseDownHandler,
+        mouseMoveHandler,
+        mouseUpHandler,
+    }) => {
 
         const imageUrl = `https://picsum.photos/id/${id}/200/200?grayscale`;
         const translateOption = `translateX(${translate}%)`
@@ -25,6 +40,9 @@ const Slide: FC<SlideProps> =
                 onTouchStart={touchStartHandler}
                 onTouchMove={touchMoveHandler}
                 onTouchEnd={touchEndHandler}
+                onMouseDown={mouseDownHandler}
+                onMouseMove={mouseMoveHandler}
+                onMouseUp={mouseUpHandler}
             >
                 <div className="slide__image-wrapper">
                     <img src={imageUrl} className="slide__image" alt={category} />

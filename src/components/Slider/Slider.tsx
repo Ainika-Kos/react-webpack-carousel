@@ -27,6 +27,14 @@ const Slider = () => {
         setTouchEnd(event.targetTouches[0].clientX);
     };
 
+    const mouseDownHandler = (event: React.MouseEvent) => {
+        setTouchStart(event.clientX);
+    };
+
+    const mouseMoveHandler = (event: React.MouseEvent) => {
+        setTouchEnd(event.clientX);
+    };
+
     const handleTouchEnd = () => {
         if (touchStart - touchEnd > 150) {
             nextSlideHandler();
@@ -51,9 +59,12 @@ const Slider = () => {
                                 category={category}
                                 author={author}
                                 translate={translate.toString()}
-                                touchStartHandler={(touchStartEvent:React.TouchEvent) => handleTouchStart(touchStartEvent)}
-                                touchMoveHandler={(touchMoveEvent:React.TouchEvent) => handleTouchMove(touchMoveEvent)}
+                                touchStartHandler={(e: React.TouchEvent) => handleTouchStart(e)}
+                                touchMoveHandler={(e: React.TouchEvent) => handleTouchMove(e)}
                                 touchEndHandler={() => handleTouchEnd()}
+                                mouseDownHandler={(e: React.MouseEvent) => mouseDownHandler(e)}
+                                mouseMoveHandler={(e: React.MouseEvent) => mouseMoveHandler(e)}
+                                mouseUpHandler={() => handleTouchEnd()}
                             />
                         </div>
                     )
