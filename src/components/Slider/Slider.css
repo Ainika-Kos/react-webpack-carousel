@@ -3,10 +3,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
 
-.slider-wrapper {
+.slider__heading {
+    margin: 16px auto;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.slider-box {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    width: 310px;
+    min-height: 500px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0.1875rem 1.5rem rgba(0, 0, 0, 0.5);
+    margin: 16px 0;
+}
+
+.slider__button-wrapper {
+    display: flex;
     align-items: center;
 }

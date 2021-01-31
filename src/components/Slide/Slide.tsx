@@ -1,14 +1,25 @@
 import React, { FC } from 'react';
-import { SlideType } from '../../types/types';
 import './Slide.css';
 
-const Slide: FC<SlideType> =
-    ({ id, title, category, author }) => {
+type SlideProps = {
+    id: number;
+    title: string;
+    category: string;
+    author: string;
+    translate: string
+}
+
+const Slide: FC<SlideProps> =
+    ({ id, title, category, author, translate }) => {
 
         const imageUrl = `https://picsum.photos/id/${id}/200/200?grayscale`;
+        const translateOption = `translateX(${translate}%)`
 
         return (
-            <div className="slide">
+            <div
+                className="slide"
+                style={{transform: translateOption}}
+            >
                 <div className="slide__image-wrapper">
                     <img src={imageUrl} className="slide__image" alt={category} />
                 </div>

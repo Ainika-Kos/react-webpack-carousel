@@ -62,3 +62,5 @@ export const slides: SlideType[] = [
         author: 'Louisa Shannon'
     },
 ]
+
+export const maxLength = (slides.length - 1) * -100;
