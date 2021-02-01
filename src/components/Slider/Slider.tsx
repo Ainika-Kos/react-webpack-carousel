@@ -8,8 +8,8 @@ const Slider = () => {
 
     const [translate, setTranslate] = useState(0);
     const [activeIndex, setActiveIndex] = useState(0);
-    const [touchStart, setTouchStart] = React.useState(0);
-    const [touchEnd, setTouchEnd] = React.useState(0);
+    const [touchStart, setTouchStart] = useState(0);
+    const [touchEnd, setTouchEnd] = useState(0);
 
     const previousSlideHandler = () => {
         translate === 0 ? setTranslate(maxLength) : setTranslate(translate + 100);
