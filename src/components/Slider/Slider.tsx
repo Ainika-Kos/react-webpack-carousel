@@ -21,7 +21,6 @@ const Slider = () => {
         activeIndex === slidesLength ? setActiveIndex(0) : setActiveIndex(activeIndex + 1);
     };
 
-
     const handleTouchStart = (event: React.TouchEvent) => {
         setTouchStart(event.targetTouches[0].clientX);
     };

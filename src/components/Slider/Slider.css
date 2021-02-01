@@ -36,14 +36,14 @@
 }
 
 .slider__dot {
-  width: 15px;
-  height: 15px;
-  background-color: #7D7F80;
-  margin: 5px;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 0.1875rem 1.5rem rgba(0, 0, 0, 0.5);
-  transition: all 0.5s;
+    width: 15px;
+    height: 15px;
+    background-color: #7D7F80;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0.1875rem 1.5rem rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
 }
 
 .active {
