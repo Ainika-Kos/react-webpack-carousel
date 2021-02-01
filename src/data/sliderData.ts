@@ -63,4 +63,5 @@ export const slides: SlideType[] = [
     },
 ]
 
-export const maxLength = (slides.length - 1) * -100;
+export const slidesLength = slides.length - 1;
+export const maxLength = slidesLength * -100;

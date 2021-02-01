@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { slides, maxLength } from '../../data/sliderData';
+import { slides, slidesLength, maxLength } from '../../data/sliderData';
 import Slide from '../Slide/Slide';
 import Button from '../Button/Button';
 import './Slider.css';
@@ -7,15 +7,18 @@ import './Slider.css';
 const Slider = () => {
 
     const [translate, setTranslate] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(0);
     const [touchStart, setTouchStart] = React.useState(0);
     const [touchEnd, setTouchEnd] = React.useState(0);
 
     const previousSlideHandler = () => {
         translate === 0 ? setTranslate(maxLength) : setTranslate(translate + 100);
+        activeIndex === 0 ? setActiveIndex(slidesLength) : setActiveIndex(activeIndex - 1);
     };
 
     const nextSlideHandler = () => {
         translate === maxLength ? setTranslate(0) : setTranslate(translate - 100);
+        activeIndex === slidesLength ? setActiveIndex(0) : setActiveIndex(activeIndex + 1);
     };
 
 
@@ -45,6 +48,10 @@ const Slider = () => {
         }
     };
 
+    const activeIndexHandler = (index: number) => {
+        setActiveIndex(index);
+        setTranslate(index * -100);
+    }
 
     return (
         <div className="slider">
@@ -70,6 +77,18 @@ const Slider = () => {
                     )
                 })}
             </div>
+            <div className="slider__dots-wrapper">
+                {slides.map((_item, index) => {
+                    return (
+                        <span
+                            key={index}
+                            className={activeIndex === index ? 'slider__dot active' : 'slider__dot'}
+                            onClick={() => activeIndexHandler(index)}
+                        >
+                        </span>
+                    );
+                })}
+            </div>
             <div className="slider__button-wrapper">
                 <Button
                     text="Previous"
@@ -80,7 +99,6 @@ const Slider = () => {
                     clickHandler={nextSlideHandler}
                 />
             </div>
-
         </div>
     );
 };

@@ -28,3 +28,25 @@
     display: flex;
     align-items: center;
 }
+
+.slider__dots-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slider__dot {
+  width: 15px;
+  height: 15px;
+  background-color: #7D7F80;
+  margin: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0.1875rem 1.5rem rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+}
+
+.active {
+    background-color: #9615DB;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
