@@ -28,10 +28,10 @@
 
 ### Preview:
 
-<p align="center"><img src="https://im6.ezgif.com/tmp/ezgif-6-f04067f1ad87.gif"></p>
-<p align="center"><img src="https://im6.ezgif.com/tmp/ezgif-6-8bed86a904bb.gif"></p>
-<p align="center"><img src="https://im6.ezgif.com/tmp/ezgif-6-8f69d17c5881.gif"></p>
-<p align="center"><img src="https://im6.ezgif.com/tmp/ezgif-6-ffa57cb2acbe.gif"></p>
+<p align="center"><img src="/assets/desktop_buttons.gif"></p>
+<p align="center"><img src="/assets/desktop_dots.gif"></p>
+<p align="center"><img src="/assets/desktop_move.gif"></p>
+<p align="center"><img src="/assets/mobile.gif"></p>
 
 ## Requirements
 
