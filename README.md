@@ -1,11 +1,11 @@
-# React-webpack Carousel 
+# React Webpack Carousel Slider
 
 ### Project demo:
 ### https://compassionate-murdock-5e6f96.netlify.app
 
 ---
 
-### You can run and test this project:
+### You can run this project:
 1. clone repository
 ### `git clone https://github.com/Ainika-Kos/react-webpack-carousel.git`
 2. when project is cloned and opened in the editor, open new terminal and type command
