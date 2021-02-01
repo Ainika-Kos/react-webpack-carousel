@@ -22,7 +22,7 @@
 2. Created according to the technical requirements
 3. Created without any additioanl libraries and setup automatizers
 4. Works on mobile and desktop devices
-5. Supports infinite option
+5. Supports infinite option and scrolling to a selected slide
 
 ---
 
